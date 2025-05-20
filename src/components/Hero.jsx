@@ -11,7 +11,7 @@ const Hero = () => {
             <div className='bg-gradient-to-b from-purple-900 to-transparent h-[400px] w-2 -mt-5' />
           </div>
           <div>
-            <h1 className='text-slate-400 font-bold text-7xl '>Hi, I'm <span className='text-slate-100'>Enoch </span></h1>
+            <h1 className='text-white font-bold text-7xl '>Hi, I'm <span className='text-purple-500'>Enoch </span></h1>
             <p className='font-medium mt-5 text-2xl sm:block hidden'>I Develop 3D Visuals, user<br></br> interfaces and web Applications</p>
           </div>
         </div>

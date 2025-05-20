@@ -9,7 +9,7 @@ function Testimonies() {
           <p className='text-[#cea0f25a] text-2xl'>WHAT OTHERS SAY</p>
           <h1 className='font-bold text-7xl mb-10'>Testimonials.</h1>
         </div>
-        <div className=' flex flex-wrap justify-center'>
+        <div className='flex'>
           <TestimonyCard />
         </div>
       </div>

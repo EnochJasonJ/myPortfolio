@@ -9,16 +9,18 @@ import Experience from './components/Experience'
 import Testimonies from './components/Testimonies'
 const App = () => {
   return (
-    <div className='bg-slate-950'>
-      <NavBar />
-      <Hero />
-      <About />
-      <Experience />
-      <TechStacks />
-      <Projects />
-      <Testimonies />
-      <Contact />
-    </div>
+    // In App.jsx
+<div className='bg-slate-950'>
+  <NavBar />
+  <div id="hero"><Hero /></div>
+  <div id="about"><About /></div>
+  <div id="experience"><Experience /></div>
+  <div id="tech"><TechStacks /></div>
+  <div id="projects"><Projects /></div>
+  <div id="testimonies"><Testimonies /></div>
+  <div id="contact"><Contact /></div>
+</div>
+
   )
 }
 

@@ -1,5 +1,8 @@
 import React from 'react'
 import Tilt from 'react-parallax-tilt'
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
 const testimonies = [
   {
     id: 1,
@@ -34,17 +37,37 @@ const testimonies = [
 ]
 
 function TestimonyCard() {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 2, // you can adjust this for responsiveness
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: { slidesToShow: 2 },
+      },
+      {
+        breakpoint: 640,
+        settings: { slidesToShow: 1 },
+      },
+    ],
+  };
+
   return (
-    <div className='flex flex-wrap justify-center gap-10 m-auto'>
-      {testimonies.map((testimony)=>(
-        <Tilt key={testimony.id}
+    <div className='mx-auto mt-10 max-w-6xl px-4'>
+      <Slider {...settings}>
+        {testimonies.map((testimony)=>(
+        <div key={testimony.id} className='p-5'>
+          <Tilt
           tiltMaxAngleX={5}
           tiltMaxAngleY={5}
           transitionSpeed={5000}
           glareEnable={true}
           glareColor= 'lightpink'
           gyroscope={true}
-          className="h-[350px] w-[325px] rounded">
+          className="h-[350px] w-auto rounded">
           <div className="h-full w-full rounded-xl bg-[#091533] gap-10 flex flex-col items-center justify-center p-5">
             <div>
               <h1 className='font-bold text-5xl'>"</h1>
@@ -56,7 +79,9 @@ function TestimonyCard() {
             </div>
           </div>
         </Tilt>
+        </div>
       ))}
+      </Slider>
     </div>
   )
 }
